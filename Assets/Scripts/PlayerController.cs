@@ -112,12 +112,4 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = new Vector3(cam.transform.position.x + disX, cam.transform.position.y + disY, -10);
         cam.transform.rotation = transform.rotation;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Collectible"))
-        {
-            Debug.Log("WOrk?");
-        }
-    }
 }
