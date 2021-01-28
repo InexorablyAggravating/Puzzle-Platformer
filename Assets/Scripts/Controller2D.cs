@@ -22,9 +22,13 @@ public class Controller2D : MonoBehaviour
 
     [SerializeField] private LayerMask collisionMask;
 
-    private void Start()
+    private void Awake()
     {
         collider = GetComponent<BoxCollider2D>();
+    }
+
+    private void Start()
+    {
         UpdateRaycastOrigins();
         CalculateRaySpacing();
     }
