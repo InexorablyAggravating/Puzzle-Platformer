@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collectibles: {fileID: 437470735}
-  Countingup: {fileID: 1119550548}
-  HighScore: {fileID: 103731361}
+  countingUp: {fileID: 1119550548}
+  highScore: {fileID: 103731361}
 --- !u!1 &250974581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee1c5fbe879b9e49b08124b16f05f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sphere: 0
+  Sphere: 1
   Cube: 0
   Count: 0
   HighScore: 0
@@ -1945,6 +1945,7 @@ MonoBehaviour:
   input: {x: 0, y: 0}
   cam: {fileID: 0}
   camSpeed: 0.6
+  camRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!61 &2110826366
 BoxCollider2D:
   m_ObjectHideFlags: 0
