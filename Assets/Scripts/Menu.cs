@@ -9,6 +9,10 @@ public class Menu : MonoBehaviour
 {
     public GameObject Collectibles;
 
+    public Text CountingDowm;
+
+    public float TimeRemaining = 20f;
+
     private int _count = 0;
     public int Count
     {
@@ -52,6 +56,16 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(TimeRemaining > 0)
+        {
+            TimeRemaining -= Time.deltaTime;
+            CountingDowm.text = TimeRemaining.ToString();
+        }
+        else
+        {
+            TimeRemaining = 0;
+            CountingDowm.text = TimeRemaining.ToString();
+
+        }
     }
 }
