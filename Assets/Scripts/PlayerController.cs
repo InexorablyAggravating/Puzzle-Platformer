@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
         input = _playerInput.Movement;
 
-        if (_playerInput.JumpPressed && _controller.collisions.Below)
+        if (_playerInput.JumpJustPressed && _controller.collisions.Below)
         {
             velocity.y = _jumpVelocity;
         }
