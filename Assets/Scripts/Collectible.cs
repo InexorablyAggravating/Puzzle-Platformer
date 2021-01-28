@@ -41,14 +41,11 @@ public class Collectible : MonoBehaviour
         {
             if (Sphere)
             {
-                Menu.instance.Collectibles.SetActive(true);
                 Count++;
-                Menu.instance.Countingup.text = Count.ToString();
-
                 HighScore += 100;
-
+                Menu.instance.Collectibles.SetActive(true);
+                Menu.instance.Countingup.text = Count.ToString();
                 Menu.instance.HighScore.text = HighScore.ToString();
-
                 Inventory.Instance.HasKey = true;
 
                 Destroy(gameObject);
