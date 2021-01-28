@@ -25,17 +25,4 @@ public class Collectible : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            if (Sphere)
-            {
-                Menu.instance.Collectible.SetActive(true);
-                Destroy(gameObject);
-                Debug.Log("Collected");
-            }
-        }
-    }
-
 }
