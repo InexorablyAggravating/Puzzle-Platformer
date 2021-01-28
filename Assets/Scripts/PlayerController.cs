@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")] public Camera cam;
     public float camSpeed = .6f;
+    public Vector3 camRotationOffset;
 
 
     private PlayerInput _playerInput;
@@ -110,6 +111,7 @@ public class PlayerController : MonoBehaviour
         var disY = transform.position.y - cam.transform.position.y;
         disY *= camSpeed;
         cam.transform.position = new Vector3(cam.transform.position.x + disX, cam.transform.position.y + disY, -10);
-        cam.transform.rotation = transform.rotation;
+        var rot = transform.rotation;
+        cam.transform.rotation = Quaternion.Euler(camRotationOffset.x + rot.eulerAngles.x, camRotationOffset.y + rot.eulerAngles.y, camRotationOffset.z + rot.eulerAngles.y);
     }
 }
