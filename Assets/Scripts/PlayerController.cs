@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,17 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInput _playerInput;
 
+
+
+    [Header("Check Point")] [SerializeField]
+    private Transform currentCheckpoint;
+    
+    
+    #if UNITY_EDITOR
+    public GameObject[] Spawns;
+    public int SpawnNumber;
+    #endif
+
     private void Awake()
     {
         _controller = GetComponent<Controller2D>();
@@ -51,6 +63,11 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         _playerInput = InputManager.PlayerInput;
 
+        
+        #if UNITY_EDITOR
+        Spawns = GameObject.FindGameObjectsWithTag(UnityTags.CHECK_POINT);
+        SpawnNumber = 0;
+        #endif
     }
 
     private void FixedUpdate()
@@ -64,6 +81,21 @@ public class PlayerController : MonoBehaviour
         UpdatePhysics();
 
         UpdateCamera();
+        
+        
+        
+        
+        #if UNITY_EDITOR
+        if (_playerInput.ToggleMiniMapJustPressed)
+            Respawn();
+
+        if (_playerInput.ToggleBlockWindowJustPressed)
+        {
+            SpawnNumber = Mathf.Clamp(SpawnNumber, 0, Spawns.Length - 1);
+            currentCheckpoint = Spawns[SpawnNumber++].transform;
+            Respawn();
+        }
+        #endif
     }
 
     private void UpdatePhysics()
@@ -113,5 +145,35 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = new Vector3(cam.transform.position.x + disX, cam.transform.position.y + disY, -10);
         var rot = transform.rotation;
         cam.transform.rotation = Quaternion.Euler(camRotationOffset.x + rot.eulerAngles.x, camRotationOffset.y + rot.eulerAngles.y, camRotationOffset.z + rot.eulerAngles.y);
+    }
+
+    private void Respawn()
+    {
+        Transform trans = null;
+        if (currentCheckpoint != null)
+            trans = currentCheckpoint;
+        else 
+            trans = GameController.Spawn;
+        
+        
+        transform.position = trans.position;
+        transform.rotation = trans.rotation;
+    }
+
+    private void SetCheckPoint(Transform trans)
+    {
+        currentCheckpoint = trans;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(UnityTags.CHECK_POINT))
+        {
+            SetCheckPoint(other.transform);
+        }
+        else if (other.CompareTag(UnityTags.HAZARD))
+        {
+            Respawn();
+        }
     }
 }
