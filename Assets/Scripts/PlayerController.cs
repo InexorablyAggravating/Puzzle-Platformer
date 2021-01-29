@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         
         
         #if UNITY_EDITOR
-        if (_playerInput.ToggleBlockWindowJustPressed)
+        if (_playerInput.ToggleMiniMapJustPressed)
             Respawn();
         #endif
     }
@@ -143,11 +143,16 @@ public class PlayerController : MonoBehaviour
         transform.rotation = trans.rotation;
     }
 
+    private void SetCheckPoint(Transform trans)
+    {
+        currentCheckpoint = trans;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(UnityTags.CHECK_POINT))
         {
-            currentCheckpoint = other.transform;
+            SetCheckPoint(other.transform);
         }
         else if (other.CompareTag(UnityTags.HAZARD))
         {
