@@ -24,7 +24,6 @@ public class Menu : MonoBehaviour
     public GameObject LoadingScreen;
     public Text LoadingText;
 
-    public GameObject TurnOffWhenNotInMenu;
     public int Count
     {
         get => _count;
@@ -82,7 +81,6 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(LevelSelect);
-        TurnOffWhenNotInMenu.SetActive(false);
         StartCoroutine(LoadingLoading());
     }
     public void OpenOptions()

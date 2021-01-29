@@ -24,20 +24,18 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PauseUnpause();
+
     }
 
     public void PauseUnpause()
     {
         if(!isPaused)
         {
-            PauseScreen.SetActive(true);
             isPaused = true;
             Time.timeScale = 0f;
         }
         else
         {
-            PauseScreen.SetActive(false);
             isPaused = true;
             Time.timeScale = 1f;
         }
