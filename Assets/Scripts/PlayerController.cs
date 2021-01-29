@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
     [Header("Check Point")] [SerializeField]
     private Transform currentCheckpoint;
     
+    
+    #if UNITY_EDITOR
+    public GameObject[] Spawns;
+    public int SpawnNumber;
+    #endif
 
     private void Awake()
     {
@@ -58,6 +63,11 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         _playerInput = InputManager.PlayerInput;
 
+        
+        #if UNITY_EDITOR
+        Spawns = GameObject.FindGameObjectsWithTag(UnityTags.CHECK_POINT);
+        SpawnNumber = 0;
+        #endif
     }
 
     private void FixedUpdate()
@@ -78,6 +88,13 @@ public class PlayerController : MonoBehaviour
         #if UNITY_EDITOR
         if (_playerInput.ToggleMiniMapJustPressed)
             Respawn();
+
+        if (_playerInput.ToggleBlockWindowJustPressed)
+        {
+            SpawnNumber = Mathf.Clamp(SpawnNumber, 0, Spawns.Length - 1);
+            currentCheckpoint = Spawns[SpawnNumber++].transform;
+            Respawn();
+        }
         #endif
     }
 
