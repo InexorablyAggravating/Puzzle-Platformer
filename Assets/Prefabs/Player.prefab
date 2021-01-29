@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2140109660738014909}
   - component: {fileID: 8110279295285411170}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: SecondCollider
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89844105493744254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
