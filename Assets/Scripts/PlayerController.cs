@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,12 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInput _playerInput;
 
+
+
+    [Header("Check Point")] [SerializeField]
+    private Transform currentCheckpoint;
+    
+
     private void Awake()
     {
         _controller = GetComponent<Controller2D>();
@@ -64,6 +71,14 @@ public class PlayerController : MonoBehaviour
         UpdatePhysics();
 
         UpdateCamera();
+        
+        
+        
+        
+        #if UNITY_EDITOR
+        if (_playerInput.ToggleBlockWindowJustPressed)
+            Respawn();
+        #endif
     }
 
     private void UpdatePhysics()
@@ -113,5 +128,30 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = new Vector3(cam.transform.position.x + disX, cam.transform.position.y + disY, -10);
         var rot = transform.rotation;
         cam.transform.rotation = Quaternion.Euler(camRotationOffset.x + rot.eulerAngles.x, camRotationOffset.y + rot.eulerAngles.y, camRotationOffset.z + rot.eulerAngles.y);
+    }
+
+    private void Respawn()
+    {
+        Transform trans = null;
+        if (currentCheckpoint != null)
+            trans = currentCheckpoint;
+        else 
+            trans = GameController.Spawn;
+        
+        
+        transform.position = trans.position;
+        transform.rotation = trans.rotation;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(UnityTags.CHECK_POINT))
+        {
+            currentCheckpoint = other.transform;
+        }
+        else if (other.CompareTag(UnityTags.HAZARD))
+        {
+            Respawn();
+        }
     }
 }
