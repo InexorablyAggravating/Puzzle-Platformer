@@ -17,7 +17,37 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FullScreenTog.isOn = Screen.fullScreen;
+
+        if(QualitySettings.vSyncCount == 0)
+        {
+            Vsync.isOn = false;
+        }
+        else
+        {
+            Vsync.isOn = true;
+        }
+
+        //search for resolution
+        bool foundRes = false;
+        for(int i = 0; i < Resolutions.Length; i++)
+        {
+            if(Screen.width == Resolutions[i].Horizontal && Screen.width == Resolutions[i].Vertical)
+            {
+                foundRes = true;
+
+                SelectedResolution = i;
+
+                UpdateResLabel();
+
+            }
+        }
+
+        if(!foundRes)
+        {
+            ResolutionLabel.text = Screen.width.ToString() + " x " + Screen.height.ToString();
+        }
+
     }
 
     // Update is called once per frame
