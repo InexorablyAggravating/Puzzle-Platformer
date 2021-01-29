@@ -20,8 +20,7 @@ public class KeyChecker : MonoBehaviour
     {
           if(Inventory.Instance.HasKey)
           {
-            Menu.instance.Collectibles.SetActive(false);
-
+            Menu.instance.Count--;
             Inventory.Instance.HasKey = false;
             Destroy(gameObject);
 

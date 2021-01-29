@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
 
     public Text CountingDowm;
 
-    public float TimeRemaining = 20f;
+    public float TimeRemaining = 0f;
 
     private int _count = 0;
 
@@ -49,12 +49,10 @@ public class Menu : MonoBehaviour
     [FormerlySerializedAs("HighScore")] [SerializeField]
     private Text highScore;
     public static Menu instance;
-    public GameObject PauseButton;
 
     private void Awake()
     {
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
@@ -68,7 +66,7 @@ public class Menu : MonoBehaviour
     {
         if (TimeRemaining > 0)
         {
-            TimeRemaining -= 1 * Time.deltaTime;
+            TimeRemaining += 1 * Time.deltaTime;
             CountingDowm.text = TimeRemaining.ToString("0");
         }
         else

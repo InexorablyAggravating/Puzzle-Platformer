@@ -43,7 +43,6 @@ public class Collectible : MonoBehaviour
             {
                 Menu.instance.Count++;
                 Menu.instance.HighScore += 100;
-                Menu.instance.Collectibles.SetActive(true);
                 Inventory.Instance.HasKey = true;
                 Destroy(gameObject);
                 Debug.Log("Collected");
