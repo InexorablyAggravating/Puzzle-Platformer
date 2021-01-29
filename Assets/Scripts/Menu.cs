@@ -20,6 +20,8 @@ public class Menu : MonoBehaviour
     public float TimeRemaining = 20f;
 
     private int _count = 0;
+
+    public GameObject TurnOffWhenNotInMenu;
     public int Count
     {
         get => _count;
@@ -47,10 +49,12 @@ public class Menu : MonoBehaviour
     [FormerlySerializedAs("HighScore")] [SerializeField]
     private Text highScore;
     public static Menu instance;
+    public GameObject PauseButton;
 
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
@@ -77,6 +81,7 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(LevelSelect);
+        TurnOffWhenNotInMenu.SetActive(false);
     }
     public void OpenOptions()
     {
