@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class OptionsMenu : MonoBehaviour
     public int SelectedResolution;
 
     public Text ResolutionLabel;
+
+    public AudioMixer TheMixer;
+
+    public Slider MasterSlider, MusicSlider, SFXSlider;
+    public Text MasterLabel, MusicLable, SFXLabel;
 
 
     // Start is called before the first frame update
@@ -48,6 +54,27 @@ public class OptionsMenu : MonoBehaviour
             ResolutionLabel.text = Screen.width.ToString() + " x " + Screen.height.ToString();
         }
 
+        if(PlayerPrefs.HasKey("MasterVol"))
+        {
+            TheMixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
+            MasterSlider.value = PlayerPrefs.GetFloat("MasterVol");
+        }
+
+        if(PlayerPrefs.HasKey("MusicVol"))
+        {
+            TheMixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol"));
+            MusicSlider.value = PlayerPrefs.GetFloat("MusicVol");
+        }
+
+        if(PlayerPrefs.HasKey("SFXVol"))
+        {
+            TheMixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol"));
+            SFXSlider.value = PlayerPrefs.GetFloat("SFXVol");
+        }
+
+            MasterLabel.text = (MasterSlider.value + 80).ToString();
+            MusicLable.text = (MusicSlider.value + 80).ToString();
+            SFXLabel.text = (MusicSlider.value + 80).ToString();
     }
 
     // Update is called once per frame
@@ -100,6 +127,34 @@ public class OptionsMenu : MonoBehaviour
         //sets resolution
         Screen.SetResolution(Resolutions[SelectedResolution].Horizontal,Resolutions[SelectedResolution].Vertical, FullScreenTog.isOn);
 
+    }
+
+    public void SetMasterVolumer()
+    {
+        MasterLabel.text = (MasterSlider.value + 80).ToString();
+
+        TheMixer.SetFloat("MasterVol", MasterSlider.value);
+
+        PlayerPrefs.SetFloat("MasterVol", MasterSlider.value);
+
+    }
+
+    public void SetMusicVol()
+    {
+        MusicLable.text = (MusicSlider.value + 80).ToString();
+
+        TheMixer.SetFloat("MusicVol", MusicSlider.value);
+
+        PlayerPrefs.SetFloat("MusicVol", MusicSlider.value);
+    }
+
+    public void SetSFXVol()
+    {
+        SFXLabel.text = (SFXSlider.value + 80).ToString();
+
+        TheMixer.SetFloat("SFXVol", SFXSlider.value);
+
+        PlayerPrefs.SetFloat("SFXVol", SFXSlider.value);
     }
 }
 
