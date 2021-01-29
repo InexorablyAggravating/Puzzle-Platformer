@@ -21,6 +21,9 @@ public class Menu : MonoBehaviour
 
     private int _count = 0;
 
+    public GameObject LoadingScreen;
+    public Text LoadingText;
+
     public GameObject TurnOffWhenNotInMenu;
     public int Count
     {
@@ -80,6 +83,7 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(LevelSelect);
         TurnOffWhenNotInMenu.SetActive(false);
+        StartCoroutine(LoadingLoading());
     }
     public void OpenOptions()
     {
@@ -92,6 +96,25 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public IEnumerator LoadingLoading()
+    {
+        LoadingScreen.SetActive(true);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(LevelSelect);
+
+        asyncLoad.allowSceneActivation = false;
+        while(!asyncLoad.isDone)
+        {
+            if(asyncLoad.progress >= .9f)
+            {
+                asyncLoad.allowSceneActivation = true;
+                Time.timeScale = 1f;
+            }
+
+            yield return null;
+        }
     }
 
 
