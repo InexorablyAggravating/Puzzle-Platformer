@@ -18,10 +18,10 @@ public class KeyChecker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-          if(Inventory.Instance.HasKey)
+          if(Inventory.Instance.HasRedKey)
           {
-            Menu.instance.Count--;
-            Inventory.Instance.HasKey = false;
+            Inventory.Instance.Count--;
+            Inventory.Instance.HasRedKey = false;
             Destroy(gameObject);
 
           }

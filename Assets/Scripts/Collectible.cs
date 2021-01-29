@@ -11,9 +11,8 @@ public class Collectible : MonoBehaviour
     [SerializeField]
     private bool Cube;
 
-    public int Count;
-
-    public int HighScore;
+    [SerializeField]
+    private bool RedKey;
 
     public static Collectible instance;
 
@@ -41,9 +40,8 @@ public class Collectible : MonoBehaviour
         {
             if (Sphere)
             {
-                Menu.instance.Count++;
+                Inventory.Instance.Count++;
                 Menu.instance.HighScore += 100;
-                Inventory.Instance.HasKey = true;
                 Destroy(gameObject);
                 Debug.Log("Collected");
             }
@@ -52,6 +50,12 @@ public class Collectible : MonoBehaviour
             {
                 Destroy(gameObject);
                 Debug.Log("Collected");
+            }
+
+            if(RedKey)
+            {
+                Inventory.Instance.HasRedKey = true;
+                Destroy(gameObject);
             }
 
         }

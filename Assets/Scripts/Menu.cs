@@ -19,20 +19,10 @@ public class Menu : MonoBehaviour
 
     public float TimeRemaining = 0f;
 
-    private int _count = 0;
 
     public GameObject LoadingScreen;
     public Text LoadingText;
 
-    public int Count
-    {
-        get => _count;
-        set
-        {
-            _count = value;
-            countingUp.text = value.ToString();
-        }
-    }
 
     private int _highScore = 0;
     public int HighScore
@@ -46,8 +36,6 @@ public class Menu : MonoBehaviour
     }
     
     
-    [FormerlySerializedAs("Countingup")] [SerializeField]
-    private Text countingUp;
     [FormerlySerializedAs("HighScore")] [SerializeField]
     private Text highScore;
     public static Menu instance;
@@ -59,7 +47,6 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        countingUp.text = Count.ToString();
         highScore.text = HighScore.ToString();
     }
 

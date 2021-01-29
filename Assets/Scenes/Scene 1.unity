@@ -6866,9 +6866,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6822943934689247032, guid: 1b15dc3436892d9418735af0e78090ca, type: 3}
+      propertyPath: countingUp
+      value: 
+      objectReference: {fileID: 2423866823063115318}
     - target: {fileID: 6822943934689247033, guid: 1b15dc3436892d9418735af0e78090ca, type: 3}
       propertyPath: m_RootOrder
-      value: 180
+      value: 179
       objectReference: {fileID: 0}
     - target: {fileID: 6822943934689247033, guid: 1b15dc3436892d9418735af0e78090ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17483,7 +17487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 370.8, y: -6.0999756}
+  m_AnchoredPosition: {x: 370.8, y: 9.599976}
   m_SizeDelta: {x: 481.5755, y: 212.5556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2423866823063115318
@@ -17629,7 +17633,7 @@ RectTransform:
   - {fileID: 914845020}
   - {fileID: 1640450382}
   m_Father: {fileID: 0}
-  m_RootOrder: 179
+  m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17655,7 +17659,6 @@ MonoBehaviour:
   TimeRemaining: 1
   LoadingScreen: {fileID: 1640450383}
   LoadingText: {fileID: 1268691457}
-  countingUp: {fileID: 2423866823063115318}
   highScore: {fileID: 2423866824196897475}
 --- !u!222 &2423866824196897472
 CanvasRenderer:
