@@ -213,7 +213,7 @@ MonoBehaviour:
   accelTimeGround: 0.1
   moveSpeed: 6
   moveSpeedFlying: 16
-  maxSpeed: {x: 32, y: 32}
+  maxSpeed: {x: 64, y: 64}
   velocity: {x: 0, y: 0}
   velocityXSmoothing: 0
   velocityYSmoothing: 0
