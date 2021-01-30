@@ -560,6 +560,9 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 8
+  collisionMaskDown:
+    serializedVersion: 2
+    m_Bits: 72
 --- !u!50 &-2456593972544140164
 Rigidbody2D:
   serializedVersion: 4
