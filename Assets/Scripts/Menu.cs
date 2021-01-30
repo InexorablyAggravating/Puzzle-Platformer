@@ -40,6 +40,8 @@ public class Menu : MonoBehaviour
     private Text highScore;
     public static Menu instance;
 
+    public int MusicToPlays;
+
     private void Awake()
     {
         instance = this;
@@ -48,11 +50,13 @@ public class Menu : MonoBehaviour
     void Start()
     {
         highScore.text = HighScore.ToString();
+        AudioManager.instance.PlayMusic(MusicToPlays);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (TimeRemaining >= 0)
         {
             TimeRemaining += 1 * Time.deltaTime;
