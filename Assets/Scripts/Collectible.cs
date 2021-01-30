@@ -6,13 +6,19 @@ using UnityEngine.UI;
 public class Collectible : MonoBehaviour
 {
     [SerializeField]
-    private bool Sphere;
+    private bool Pellets;
 
     [SerializeField]
     private bool Cube;
 
     [SerializeField]
     private bool RedKey;
+
+    [SerializeField]
+    private bool BlueKey;
+
+    [SerializeField]
+    private bool Yellowkey;
 
     public static Collectible instance;
 
@@ -38,7 +44,7 @@ public class Collectible : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (Sphere)
+            if (Pellets)
             {
                 Inventory.Instance.Count++;
                 Menu.instance.HighScore += 100;
@@ -55,6 +61,7 @@ public class Collectible : MonoBehaviour
             if(RedKey)
             {
                 Inventory.Instance.HasRedKey = true;
+                Inventory.Instance.Count++;
                 Destroy(gameObject);
             }
 

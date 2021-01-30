@@ -53,15 +53,10 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TimeRemaining > 0)
+        if (TimeRemaining >= 0)
         {
             TimeRemaining += 1 * Time.deltaTime;
             CountingDowm.text = TimeRemaining.ToString("0");
-        }
-        else
-        {
-            TimeRemaining = 0;
-            CountingDowm.text = TimeRemaining.ToString();
         }
     }
 
