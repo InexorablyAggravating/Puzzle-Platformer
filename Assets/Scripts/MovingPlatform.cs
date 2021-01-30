@@ -16,7 +16,7 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Player = GameObject.FindWithTag(UnityTags.PLAYER);
+       
     }
 
     // Update is called once per frame
@@ -49,9 +49,13 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject == Player)
+        if(collision.gameObject.CompareTag ("Player"))
         {
+
+            Player = collision.gameObject;
+
             Player.transform.parent = transform;
+
 
         }
     }
