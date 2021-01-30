@@ -5,6 +5,14 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance;
+
+    public AudioSource[] soundeffects, Music;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     public AudioMixer TheMixer;
     // Start is called before the first frame update
     void Start()
@@ -32,5 +40,17 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlaySFX(int sountToPlay)
+    {
+        soundeffects[sountToPlay].Stop();
+        soundeffects[sountToPlay].Play();
+    }
+
+    public void PlayMusic(int SoundToPlay)
+    {
+        Music[SoundToPlay].Stop();
+        Music[SoundToPlay].Play();
     }
 }

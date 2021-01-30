@@ -23,6 +23,8 @@ public class Menu : MonoBehaviour
     public GameObject LoadingScreen;
     public Text LoadingText;
 
+    public int MusicToPlay;
+
 
     private int _highScore = 0;
     public int HighScore
@@ -48,6 +50,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         highScore.text = HighScore.ToString();
+        AudioManager.instance.PlayMusic(MusicToPlay);
     }
 
     // Update is called once per frame
