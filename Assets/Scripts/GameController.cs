@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
 
     public static Transform Spawn => instance._spawnPoint;
 
-    public void Start()
+    public void Awake()
     {
         instance = this;
         _spawnPoint = GameObject.FindWithTag(UnityTags.SPAWN_POINT).transform;
