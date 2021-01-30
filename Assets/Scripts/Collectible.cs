@@ -46,22 +46,22 @@ public class Collectible : MonoBehaviour
         {
             if (Pellets)
             {
-                Inventory.Instance.Count++;
                 Menu.instance.HighScore += 100;
                 Destroy(gameObject);
                 Debug.Log("Collected");
             }
 
-            if (Cube)
+            else if (Cube)
             {
                 Destroy(gameObject);
                 Debug.Log("Collected");
             }
 
-            if(RedKey)
+            else if(RedKey)
             {
                 Inventory.Instance.HasRedKey = true;
                 Inventory.Instance.Count++;
+                Debug.Log("Hit" + Inventory.Instance.Count);
                 Destroy(gameObject);
             }
 
