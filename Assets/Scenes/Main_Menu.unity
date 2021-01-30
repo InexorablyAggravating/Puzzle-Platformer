@@ -147,12 +147,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 29822513, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 977.3145
+      objectReference: {fileID: 0}
+    - target: {fileID: 29822513, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 455.49353
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 29822513, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 347.57104
+      objectReference: {fileID: 0}
+    - target: {fileID: 29822515, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
+      propertyPath: m_Text
+      value: Lost in the office
       objectReference: {fileID: 0}
     - target: {fileID: 269604258, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_AnchorMax.y
