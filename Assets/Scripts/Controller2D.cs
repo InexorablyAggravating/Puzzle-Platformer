@@ -8,6 +8,7 @@ public class Controller2D : MonoBehaviour
 
     public int horizontalRayCount = 4;
     public int verticalRayCount = 4;
+    private Rigidbody2D rb;
 
     private float _horizontalRaySpacing;
     private float _verticalRaySpacing;
@@ -26,12 +27,14 @@ public class Controller2D : MonoBehaviour
     private void Awake()
     {
         collider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
         UpdateRaycastOrigins();
         CalculateRaySpacing();
+
     }
 
     public void Fly(Vector2 velocity)
@@ -39,6 +42,14 @@ public class Controller2D : MonoBehaviour
         transform.Translate(velocity, Space.Self);
     }
 
+    public void Update()
+    {
+        if (rb.velocity.y < +5)
+        {
+           // rb.velocity = new Vector2(rb.velocity.x, -5);
+        }          
+
+    }
     public void Move(Vector2 velocity)
     {
         UpdateRaycastOrigins();
