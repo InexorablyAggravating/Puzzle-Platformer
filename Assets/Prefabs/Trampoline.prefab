@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5626596669582056079}
   - component: {fileID: 5626596669582056072}
   - component: {fileID: 1764101522}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Trampoline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,10 +126,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5626596669696217940}
   - component: {fileID: 5626596669696217941}
   - component: {fileID: 1283423062}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 5626596670085344218}
   - component: {fileID: 5626596670085344219}
   - component: {fileID: 1817374734}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 5626596670109589109}
   - component: {fileID: 5626596670109589110}
   - component: {fileID: 208047325}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 5626596670733460811}
   - component: {fileID: 5626596670733460916}
   - component: {fileID: 1774152564}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 5626596670953929784}
   - component: {fileID: 5626596670953929785}
   - component: {fileID: 8757753215812846902}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Jump Pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

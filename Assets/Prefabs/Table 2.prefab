@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5934791751416802887}
   - component: {fileID: 7128085634493457032}
   - component: {fileID: 8830220881640069595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Legs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8413609494977694602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4004407269975487824}
   - component: {fileID: 4596243696319351276}
   - component: {fileID: 3891077205391923893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 5200160419963941340}
   - component: {fileID: 290427854962346822}
   - component: {fileID: 8839995989693257436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
