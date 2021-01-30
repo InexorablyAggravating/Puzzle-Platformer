@@ -7,9 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public GameObject[] Waypoints;
     public GameObject Player;
     int current = 0;
-    float rotspeed;
     public float Speed;
-    float WPradius = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,18 +17,16 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(Waypoints[current].transform.position, transform.position) < WPradius)
+        transform.position = Vector3.MoveTowards(transform.position, Waypoints[current].transform.position, Speed * Time.deltaTime);
+        if(transform.position == Waypoints[current].transform.position)
         {
-            current = Random.Range(0, Waypoints.Length);
-            {
-                if(current >= Waypoints.Length)
-                {
-                    current = 0;
-                }
-            }
-
+            current++;
         }
-        transform.position = Vector3.MoveTowards(transform.position, Waypoints[current].transform.position, Time.deltaTime * Speed);
+
+        if(current == Waypoints.Length)
+        {
+            current = 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
