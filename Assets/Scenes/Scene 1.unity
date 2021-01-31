@@ -3186,7 +3186,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: ' My wife left me'
-  dialog2: 
+  dialog2: We were supposed to get married next week
   dialogActive: 0
   Coffee: 0
 --- !u!70 &144539335
@@ -3262,7 +3262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144539333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.589996, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 63.589996, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11654,7 +11654,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: We are very thirsty so hurry it up!
-  dialog2: 
+  dialog2: I hope the boss is not angry about you finding the coffee
   dialogActive: 0
   Coffee: 0
 --- !u!23 &528760413
@@ -12534,7 +12534,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: You arent supposed to be here...
-  dialog2: 
+  dialog2: You still arent suppoed to be here
   dialogActive: 0
   Coffee: 0
 --- !u!70 &567361241
@@ -13884,7 +13884,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: I hope the raise is good
-  dialog2: 
+  dialog2: The raise was all a lie
   dialogActive: 0
   Coffee: 0
 --- !u!70 &622206185
@@ -13960,7 +13960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622206183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.339996, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 58.339996, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17810,7 +17810,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Dont push the trampoline too far. Bad things will happen if you do.
-  dialog2: 
+  dialog2: You are still alive?
   dialogActive: 0
   Coffee: 0
 --- !u!70 &754441951
@@ -19903,7 +19903,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Tell my wife I love her
-  dialog2: 
+  dialog2: My wife left me again
   dialogActive: 0
   Coffee: 0
 --- !u!70 &891587870
@@ -19979,7 +19979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891587868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.84, y: -8.81, z: -2.87}
+  m_LocalPosition: {x: 99.39, y: -10.9, z: -2.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25900,6 +25900,128 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 285
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &1146898373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146898378}
+  - component: {fileID: 1146898377}
+  - component: {fileID: 1146898376}
+  - component: {fileID: 1146898375}
+  - component: {fileID: 1146898374}
+  m_Layer: 3
+  m_Name: Are you winning son
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1146898374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146898373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb61299814406284fb8a5d6a745bb4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Winner: Win Scene
+--- !u!61 &1146898375
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146898373}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.9437027, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.8874054, y: 1}
+  m_EdgeRadius: 0
+--- !u!23 &1146898376
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146898373}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 74ff3785dbef9f3448014ba4f692add3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1146898377
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146898373}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1146898378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146898373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.75, y: 2, z: 1}
+  m_LocalScale: {x: 0.5, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 544
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147321083
 GameObject:
   m_ObjectHideFlags: 0
@@ -27989,7 +28111,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Look at me im behind this window!
-  dialog2: 
+  dialog2: I am still behind this window
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1242758926
@@ -34142,7 +34264,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: ' I have such pathetic employees'
-  dialog2: 
+  dialog2: I was lying about the raise
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1471593562
@@ -34218,7 +34340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471593560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.34, y: -8.81, z: 4.88}
+  m_LocalPosition: {x: 85.04, y: -10.47, z: 4.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35744,7 +35866,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: The boss hasnt lost yet
-  dialog2: 
+  dialog2: I hate the boss
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1537995633
@@ -35820,7 +35942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537995631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.589996, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 60.589996, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36374,7 +36496,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: ' Boss said if we beat him at a boxing match all of us will get a promotion'
-  dialog2: 
+  dialog2: No one won that match
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1550897688
@@ -36450,7 +36572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550897686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.839996, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 55.839996, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39532,7 +39654,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: You must collect 30 coffee cups in order to leave.
-  dialog2: 
+  dialog2: You werent supposed to collect the cups
   dialogActive: 0
   Coffee: 0
 --- !u!23 &1748147485
@@ -41133,7 +41255,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Im scared. The boss hasnt lost a single match yet
-  dialog2: 
+  dialog2: Im quitting
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1819140649
@@ -41209,7 +41331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819140647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.59, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 69.59, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43467,7 +43589,7 @@ MonoBehaviour:
   DialogText: {fileID: 2040666796}
   dialog: ' I sure hope the guy behind me doesnt know that ive been sleeping with
     his wife'
-  dialog2: 
+  dialog2: We are getting married next week
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1884216563
@@ -43543,7 +43665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884216561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.09, y: -10.06, z: 6.63}
+  m_LocalPosition: {x: 67.09, y: -10.4, z: 6.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44601,7 +44723,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Welcome to the game player
-  dialog2: 
+  dialog2: Go ahead and leave!! We dont care!
   dialogActive: 0
   Coffee: 0
 --- !u!23 &1925165323
@@ -45307,7 +45429,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: I promise you that  I wasnt hiding from the boss
-  dialog2: 
+  dialog2: Is it over yet?
   dialogActive: 0
   Coffee: 0
 --- !u!70 &1948698082
