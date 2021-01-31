@@ -75,9 +75,7 @@ public class MovingPlatform : MonoBehaviour
         {
             AudioManager.instance.ElevatorrMusic();
             
-            Player = collision.gameObject;
-
-            Player.transform.parent = transform;
+            collision.transform.parent = transform;
 
 
         }
@@ -88,7 +86,7 @@ public class MovingPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag(UnityTags.PLAYER))
         {
             AudioManager.instance.MainThemePlay();
-            Player.transform.parent = null;
+            collision.transform.parent = null;
 
         }
     }
