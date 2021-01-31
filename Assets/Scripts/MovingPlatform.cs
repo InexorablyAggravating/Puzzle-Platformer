@@ -7,6 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public GameObject[] Waypoints;
     public GameObject Player;
     public AudioSource ElevatorMusic, stop;
+    public GameObject Test;
     public int current = 0;
     public float Speed;
 
@@ -14,6 +15,9 @@ public class MovingPlatform : MonoBehaviour
     private float pauseTimer = 0f;
     private bool paused = false;
 
+    public bool Goingdown = false;
+    public float AnotherPause = 2f;
+    public float anotherTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,15 +38,32 @@ public class MovingPlatform : MonoBehaviour
             return;
         }
 
+            if(Goingdown)
+            {
+               anotherTimer += Time.deltaTime;
+                if (anotherTimer >= AnotherPause)
+                {
+                    Test.SetActive(true);
+                    Goingdown = false;
+                    anotherTimer = 0f;
+                }
+                return;
+            }
+
+
         transform.position = Vector3.MoveTowards(transform.position, Waypoints[current].transform.position, Speed * Time.fixedDeltaTime);
+
 
         if (transform.position == Waypoints[current].transform.position)
         {
+
             current++;
+            Test.SetActive(false);
             paused = true;
             if (current == Waypoints.Length)
             {
                 current = 0;
+                Goingdown = true;
             }
         }
 
