@@ -2888,8 +2888,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: ' My wife left me'
+  dialog: ' My wife left me...'
+  dialog2: ' We were supposed to get married next week...'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &144539335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11118,7 +11120,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: We are very thirsty so hurry it up!
+  dialog2: ' I hope the boss isnt too angry that you found the coffee'
   dialogActive: 0
+  Coffee: 0
 --- !u!23 &528760413
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11935,7 +11939,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: You arent supposed to be here...
+  dialog2: ' Arent you supposed to be leaving!!'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &567361241
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13133,7 +13139,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: I hope the raise is good
+  dialog2: ' We lost so we arent getting that promotion'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &622206185
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16727,8 +16735,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: Dont push the trampoline too far. Bad things will happen if you do.
+  dialog: ' Dont push the trampoline too far. Bad things will happen if you do.'
+  dialog2: ' I see that you are still alive'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &754441951
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -18694,7 +18704,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Tell my wife I love her
+  dialog2: ' I sitll love my wife'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &891587870
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -18768,7 +18780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891587868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.84, y: -8.81, z: -2.87}
+  m_LocalPosition: {x: 100.4, y: -10.5, z: -2.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26170,8 +26182,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: Look at me im behind this window!
+  dialog: '  Look at me im behind this window!'
+  dialog2: '  I am still behind this window'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1242758926
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -31936,7 +31950,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: ' I have such pathetic employees'
+  dialog2: ' I was not actually planning on giving them a raise'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1471593562
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -32010,7 +32026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471593560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.84, y: -8.81, z: 4.88}
+  m_LocalPosition: {x: 85.28, y: -10.78, z: 7.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -33370,7 +33386,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: The boss hasnt lost yet
+  dialog2: ' The boss is still undefeated'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1537995633
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -33998,7 +34016,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: ' Boss said if we beat him at a boxing match all of us will get a promotion'
+  dialog2: ' I feel like the boss just wanted to beat us up'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1550897688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -36837,7 +36857,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: You must collect 30 coffee cups in order to leave.
+  dialog2: '  We werent hoping that you would find the cups of coffee'
   dialogActive: 0
+  Coffee: 0
 --- !u!23 &1748147485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38342,8 +38364,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: Im scared. The boss hasnt lost a single match yet
+  dialog: ' Im scared. The boss hasnt lost a single match yet'
+  dialog2: ' I feel like the boss is a liar'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1819140649
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -40424,9 +40448,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: ' I sure hope the guy behind me doesnt know that ive been sleeping with
+  dialog: '  I sure hope the guy behind me doesnt know that ive been sleeping with
     his wife'
+  dialog2: ' We are getting married next week'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1884216563
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -41450,7 +41476,9 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: Welcome to the game player
+  dialog2: ' The door is open, now scram!'
   dialogActive: 0
+  Coffee: 0
 --- !u!23 &1925165323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42090,8 +42118,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
-  dialog: I promise you that  I wasnt hiding from the boss
+  dialog: ' I promise you that  I wasnt hiding from the boss'
+  dialog2: ' Is everything ok down there?'
   dialogActive: 0
+  Coffee: 0
 --- !u!70 &1948698082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
