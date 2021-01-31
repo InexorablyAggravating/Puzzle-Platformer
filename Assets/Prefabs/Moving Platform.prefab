@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3797161258641297415}
   - component: {fileID: 3797161258641297412}
   - component: {fileID: 3797161258641297410}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.06400019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -205,7 +205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.1280003}
   m_EdgeRadius: 0
 --- !u!114 &3797161258641297410
 MonoBehaviour:
@@ -225,9 +225,13 @@ MonoBehaviour:
   Player: {fileID: 5997197959290615245, guid: bfdf5f5094d34ac4e8410360c46cfe47, type: 3}
   ElevatorMusic: {fileID: 0}
   stop: {fileID: 0}
+  Test: {fileID: 0}
   current: 0
   Speed: 5
   pauseDuration: 3
+  Goingdown: 0
+  AnotherPause: 2
+  anotherTimer: 0
 --- !u!1 &8892029599907537441
 GameObject:
   m_ObjectHideFlags: 0
