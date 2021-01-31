@@ -24,7 +24,8 @@ public class Controller2D : MonoBehaviour
     public CollisionInfo collisions;
 
     [SerializeField] private LayerMask collisionMask;
-    [SerializeField] private LayerMask collisionMaskDown;
+    [SerializeField] private LayerMask collisionMaskMoveable;
+    [SerializeField] private LayerMask collisionMaskMoveableDown;
 
     private void Awake()
     {
@@ -142,7 +143,7 @@ public class Controller2D : MonoBehaviour
         {
             var rayOrigin = (directionY == -1) ? raycastOrigins.BottomLeft : raycastOrigins.TopLeft;
             rayOrigin += (Vector2)transform.right * (_verticalRaySpacing * i + velocity.x);
-            var hit = Physics2D.Raycast(rayOrigin, transform.up * directionY, rayLength, collisionMaskDown);
+            var hit = directionY>0?Physics2D.Raycast(rayOrigin, transform.up * directionY, rayLength, collisionMaskMoveable) : Physics2D.Raycast(rayOrigin, transform.up * directionY, rayLength, collisionMaskMoveableDown);;
 
 
             Debug.DrawRay(rayOrigin, transform.up * directionY * rayLength, Color.red);
