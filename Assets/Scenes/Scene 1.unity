@@ -4727,6 +4727,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6822943934689247032, guid: 1b15dc3436892d9418735af0e78090ca, type: 3}
+      propertyPath: Turnoff
+      value: 
+      objectReference: {fileID: 627853770}
+    - target: {fileID: 6822943934689247032, guid: 1b15dc3436892d9418735af0e78090ca, type: 3}
       propertyPath: countingUp
       value: 
       objectReference: {fileID: 986214001}
@@ -7381,7 +7385,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1696612550, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768793837, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1849.873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768793837, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16.5635
       objectReference: {fileID: 0}
     - target: {fileID: 2423866823333520646, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_FontData.m_Font
