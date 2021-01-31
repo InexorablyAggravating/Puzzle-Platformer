@@ -27,11 +27,13 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (paused)
         {
             pauseTimer += Time.deltaTime;
             if (pauseTimer >= pauseDuration)
             {
+                Test.SetActive(true);
                 paused = false;
                 pauseTimer = 0f;
             }
@@ -40,14 +42,12 @@ public class MovingPlatform : MonoBehaviour
 
             if(Goingdown)
             {
-               anotherTimer += Time.deltaTime;
-                if (anotherTimer >= AnotherPause)
-                {
-                    Test.SetActive(true);
                     Goingdown = false;
-                    anotherTimer = 0f;
-                }
-                return;
+
+            }
+            else
+            {
+                Test.SetActive(true);
             }
 
 
@@ -75,7 +75,6 @@ public class MovingPlatform : MonoBehaviour
         {
             AudioManager.instance.ElevatorrMusic();
             
-
             Player = collision.gameObject;
 
             Player.transform.parent = transform;

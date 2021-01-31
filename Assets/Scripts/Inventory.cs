@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour
 
     private int _count = 0;
 
+    public GameObject Turnoff;
+
     public int Count
     {
         get => _count;
@@ -42,6 +44,7 @@ public class Inventory : MonoBehaviour
         if(_count >= 30)
         {
             Dialogue.instance.Coffee = true;
+            Turnoff.SetActive(false);
         }
     }
 }

@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour
 
     public bool Coffee = false;
 
+    public GameObject Turnoff;
+
     private void Awake()
     {
         instance = this;
@@ -45,6 +47,7 @@ public class Dialogue : MonoBehaviour
         {
             dialogBox.SetActive(true);
             DialogText.text = dialog2;
+            Turnoff.SetActive(false);
         }
     }
 
