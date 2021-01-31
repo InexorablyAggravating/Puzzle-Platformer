@@ -12,6 +12,7 @@ namespace DefaultNamespace
             {
                 var con = other.GetComponent<PlayerController>();
                 con.velocity = new Vector2(con.velocity.x, jumpHeight);
+                AudioManager.instance.PlaySFX(1);
             }
         }
     }
