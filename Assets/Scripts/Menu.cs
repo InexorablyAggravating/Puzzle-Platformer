@@ -50,7 +50,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         highScore.text = HighScore.ToString();
-        AudioManager.instance.PlayMusic(MusicToPlays);
+        AudioManager.instance.MainThemePlay();
     }
 
     // Update is called once per frame

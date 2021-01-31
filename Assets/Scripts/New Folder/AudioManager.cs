@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource[] SFX, Music;
+    public AudioSource Main_Theme, ElevatorMusic;
     public AudioMixer TheMixer;
 
     private void Awake()
@@ -51,5 +52,17 @@ public class AudioManager : MonoBehaviour
     {
         Music[SoundToPlay].Stop();
         Music[SoundToPlay].Play();
+    }
+
+    public void MainThemePlay()
+    {
+        ElevatorMusic.Stop();
+        Main_Theme.Play();
+    }
+
+    public void ElevatorrMusic()
+    {
+        Main_Theme.Stop();
+        ElevatorMusic.Play();
     }
 }

@@ -52,7 +52,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            ElevatorMusic.Play();
+            AudioManager.instance.ElevatorrMusic();
             
 
             Player = collision.gameObject;
@@ -67,7 +67,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject == Player)
         {
-            ElevatorMusic.Stop();
+            AudioManager.instance.MainThemePlay();
             Player.transform.parent = null;
 
         }
