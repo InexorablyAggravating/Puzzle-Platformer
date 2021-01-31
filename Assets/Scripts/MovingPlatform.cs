@@ -20,7 +20,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (paused)
         {
@@ -33,7 +33,7 @@ public class MovingPlatform : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, Waypoints[current].transform.position, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, Waypoints[current].transform.position, Speed * Time.fixedDeltaTime);
 
         if (transform.position == Waypoints[current].transform.position)
         {
