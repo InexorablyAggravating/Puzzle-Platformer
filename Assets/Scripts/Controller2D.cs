@@ -16,7 +16,6 @@ public class Controller2D : MonoBehaviour
     public float maxSlopeAngle = 65;
 
 
-    public Transform ChildVisible;
 
 
     private new BoxCollider2D collider;
@@ -132,7 +131,6 @@ public class Controller2D : MonoBehaviour
                 }
             }
         }
-        ChildVisible.localScale = new Vector3(directionX, 1, 1);
     }
 
     private void VerticalCollisions(ref Vector2 velocity)

@@ -499,6 +499,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   camSpeed: 0.6
   camRotationOffset: {x: 0, y: 0, z: 0}
+  ChildVisible: {fileID: 3053673618905258384}
   currentCheckpoint: {fileID: 0}
   Spawns: []
   SpawnNumber: 0
@@ -543,7 +544,6 @@ MonoBehaviour:
   horizontalRayCount: 4
   verticalRayCount: 4
   maxSlopeAngle: 65
-  ChildVisible: {fileID: 3053673618905258384}
   collisionMask:
     serializedVersion: 2
     m_Bits: 8

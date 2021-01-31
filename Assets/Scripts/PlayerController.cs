@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput _playerInput;
 
 
+    public Transform ChildVisible;
 
     [Header("Check Point")] [SerializeField]
     private Transform currentCheckpoint;
@@ -134,7 +135,15 @@ public class PlayerController : MonoBehaviour
             velocity.x = 0;
             velocityXSmoothing = 0;
         }
+
+        if (_playerInput.Movement.x < 0)
+            _scaleX = -1;
+        if (_playerInput.Movement.x > 0)
+            _scaleX = 1;
+        ChildVisible.localScale = new Vector3(_scaleX, 1, 1);
     }
+
+    private int _scaleX = 1;
 
 
     private void UpdateCamera()
