@@ -6,6 +6,7 @@ public class MovingPlatform : MonoBehaviour
 {
     public GameObject[] Waypoints;
     public GameObject Player;
+    public AudioSource ElevatorMusic, stop;
     public int current = 0;
     public float Speed;
 
@@ -51,6 +52,8 @@ public class MovingPlatform : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            ElevatorMusic.Play();
+            
 
             Player = collision.gameObject;
 
@@ -64,6 +67,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject == Player)
         {
+            ElevatorMusic.Stop();
             Player.transform.parent = null;
 
         }

@@ -16404,6 +16404,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &892303510 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 686182405926007148, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
+  m_PrefabInstance: {fileID: 2116927800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &894763374
 GameObject:
   m_ObjectHideFlags: 0
@@ -39130,6 +39135,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3797161258641297410, guid: 791a9841af0f1b447bb133627a1e0ad1, type: 3}
+      propertyPath: ElevatorMusic
+      value: 
+      objectReference: {fileID: 892303510}
     - target: {fileID: 3797161258641297411, guid: 791a9841af0f1b447bb133627a1e0ad1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.068
