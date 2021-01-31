@@ -12,8 +12,6 @@ public class Inventory : MonoBehaviour
 
     private int _count = 0;
 
-    private int _count2 = 0;
-
     public int Count
     {
         get => _count;
@@ -24,23 +22,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public int Count2
-    {
-        get => _count2;
-        set
-        {
-            _count2 = value;
-            countingUp2.text = value.ToString();
-        }
-    }
-
     [FormerlySerializedAs("Countingup")]
     [SerializeField]
     private Text countingUp;
-
-    [FormerlySerializedAs("Countingup2")]
-    [SerializeField]
-    private Text countingUp2;
 
     private void Awake()
     {
@@ -50,7 +34,6 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         countingUp.text = Count.ToString();
-        countingUp2.text = Count2.ToString();
     }
 
     // Update is called once per frame
