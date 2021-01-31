@@ -25,6 +25,7 @@ public class CallNextScene : MonoBehaviour
         {
             Global.ItemsCollected = Inventory.Instance.Count;
             Global.TimeTaken =(int)Menu.instance.TimeRemaining;
+            Global.TotalItems = 40;
 
             SceneManager.LoadScene(Winner);
 

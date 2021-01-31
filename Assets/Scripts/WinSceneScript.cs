@@ -14,7 +14,7 @@ public class WinSceneScript : MonoBehaviour
     private void Awake()
     {
         TimeTaken.text = TimeTaken.text.Replace("TIMETAKEN", Global.TimeTaken.ToString());
-        ItemsCollected.text = ItemsCollected.text.Replace("X", Global.ItemsCollected.ToString()).Replace("Y", Global.TotalItems.ToString());
+        ItemsCollected.text = ItemsCollected.text.Replace("X", Global.ItemsCollected.ToString()).Replace("Y 40", Global.TotalItems.ToString());
     }
 
     private void Update()
