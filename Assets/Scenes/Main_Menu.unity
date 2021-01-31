@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29822515, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
+      propertyPath: m_Text
+      value: Lost in the office
+      objectReference: {fileID: 0}
     - target: {fileID: 1377676714, guid: fc500becdc1949345b278ab0b74dc081, type: 3}
       propertyPath: m_IsActive
       value: 1
