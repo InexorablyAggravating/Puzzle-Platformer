@@ -359,6 +359,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &837666238 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1760531980, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
+  m_PrefabInstance: {fileID: 2191728760307212236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1795268614
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +457,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!82 &1828095598 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 686182405926007148, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
+  m_PrefabInstance: {fileID: 2191728760307212236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2191728760307212236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +469,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2070065342666594667, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
+      propertyPath: Main_Theme
+      value: 
+      objectReference: {fileID: 837666238}
+    - target: {fileID: 2070065342666594667, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
+      propertyPath: ElevatorMusic
+      value: 
+      objectReference: {fileID: 1828095598}
     - target: {fileID: 5836380741158658029, guid: 4f4ab5c53e5e8be4fb6919735381481e, type: 3}
       propertyPath: m_RootOrder
       value: 3
