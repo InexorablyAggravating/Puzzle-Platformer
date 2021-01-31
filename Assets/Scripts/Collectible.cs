@@ -61,7 +61,6 @@ public class Collectible : MonoBehaviour
             if(RedKey)
             {
                 Inventory.Instance.HasRedKey = true;
-                Inventory.Instance.Count++;
                 Destroy(gameObject);
             }
 
