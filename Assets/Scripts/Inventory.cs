@@ -39,6 +39,9 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(_count >= 30)
+        {
+            Dialogue.instance.Coffee = true;
+        }
     }
 }
