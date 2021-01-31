@@ -46,7 +46,8 @@ public class Collectible : MonoBehaviour
         {
             if (Pellets)
             {
-                Inventory.Instance.Count++;
+                AudioManager.instance.PlaySFX(0);
+                Inventory.Instance.Count2++;
                 Menu.instance.HighScore += 100;
                 Destroy(gameObject);
                 Debug.Log("Collected");
