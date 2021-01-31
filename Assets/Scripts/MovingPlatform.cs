@@ -71,7 +71,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag(UnityTags.PLAYER))
         {
             AudioManager.instance.ElevatorrMusic();
             
@@ -86,7 +86,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == Player)
+        if (collision.gameObject.CompareTag(UnityTags.PLAYER))
         {
             AudioManager.instance.MainThemePlay();
             Player.transform.parent = null;
