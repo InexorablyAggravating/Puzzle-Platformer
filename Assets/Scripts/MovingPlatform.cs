@@ -88,6 +88,9 @@ public class MovingPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag(UnityTags.PLAYER))
         {
             AudioManager.instance.MainThemePlay();
+
+            Player = collision.gameObject;
+
             Player.transform.parent = null;
 
         }
