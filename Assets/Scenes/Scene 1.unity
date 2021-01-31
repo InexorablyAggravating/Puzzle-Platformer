@@ -39789,7 +39789,7 @@ MonoBehaviour:
   dialogBox: {fileID: 786346089}
   DialogText: {fileID: 2040666796}
   dialog: You must collect 30 coffee cups in order to leave.
-  dialog2: You werent supposed to collect the cups
+  dialog2: You werent supposed to collect ALL the cups
   dialogActive: 0
   Coffee: 0
 --- !u!23 &1748147485
