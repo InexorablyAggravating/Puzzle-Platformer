@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         if (_playerInput.JumpJustPressed && _controller.collisions.Below)
         {
             velocity.y = _jumpVelocity;
+            AudioManager.instance.PlaySFX(2);
         }
 
         _targetVelocityX = input.x * moveSpeed;
