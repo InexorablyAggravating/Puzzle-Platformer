@@ -56,6 +56,7 @@ public class Controller2D : MonoBehaviour
     public void Move(Vector2 velocity)
     {
         UpdateRaycastOrigins();
+        CalculateRaySpacing();
         collisions.Reset();
         collisions.VelocityOld = velocity;
 
